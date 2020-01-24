@@ -1,0 +1,68 @@
+// app global css in SCSS form
+
+
+$tab-items-colors : ("indigo" : $indigo,
+"blue-grey" : $blue-grey,
+"cyan" : $cyan,
+"accent" : $accent,
+"deep-purple" : $deep-purple,
+"lime" : $lime,
+"purple" : $purple,
+"deep-orange" : $deep-orange);
+
+@media (min-width: $breakpoint-sm) {
+
+  .tab-items {
+    display: none !important;
+  }
+}
+
+@media (max-width: $breakpoint-sm-max) {
+
+  .intro-text {
+    font-size: 1em !important;
+  }
+}
+
+#intro-wrapper {
+  opacity: 0.9;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+  height: 100vh;
+}
+
+#intro {
+  background: url(/statics/puneetkushwah.jpg) no-repeat top center/cover;
+  height: 100vh;
+  opacity: 0.9;
+  position: absolute;
+  width: 100%;
+}
+
+.intro-bottom {
+  border-bottom: 4px solid $indigo;
+}
+
+.content-headers {
+  background-color: $primary;
+  color: white;
+  font-size: 4em;
+  padding: 5px;
+}
+
+
+@for $mtt from 1 through 20 {
+  .mtt-#{($mtt*10)} {
+    margin-top: $mtt*10px;
+  }
+}
+
+
+@each $coloritem,
+$item in $tab-items-colors {
+  .tab-color-hover-#{$coloritem} {
+
+    border-left: 4px solid (unquote($item));
+
+  }
+}
