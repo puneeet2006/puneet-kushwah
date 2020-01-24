@@ -57,12 +57,30 @@ $tab-items-colors : ("indigo" : $indigo,
   }
 }
 
+.test-cls {
+  background-color: red;
+}
 
 @each $coloritem,
 $item in $tab-items-colors {
-  .tab-color-hover-#{$coloritem} {
+  .tab-color-hover-#{$coloritem} :hover {
 
     border-left: 4px solid (unquote($item));
 
+  }
+
+  .tab-color-hover-#{$coloritem} :hover>div {
+    border-left: none !important;
+    ;
+
+  }
+
+  .tab-color-hover-#{$coloritem} :hover>i {
+    border-left: none !important;
+    ;
+  }
+
+  .tab-color-active-#{$coloritem} {
+    border-left: 4px solid (unquote($item));
   }
 }

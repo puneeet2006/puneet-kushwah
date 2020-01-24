@@ -25,14 +25,18 @@
         </q-card-section>
       </q-card>
       <q-list>
-        <q-item :id="item.label" v-for="(item,index) in navbaritems" :key="index" clickable tag="a" :href="item.to" class="tab-color-hover-">
-          <q-item-section avatar>
-            <q-icon :name="item.icon" :color="item.color" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>{{item.label}}</q-item-label>
-          </q-item-section>
-        </q-item>
+        <div v-scroll-to="'#'+item.id+'_view'" v-for=" (item,index) in navbaritems" :id="item.id" :key="index" :class="'tab-color-hover-'+item.color">
+          <q-item clickable tag="a" :class="[view_port_id == item.id ? 'tab-color-active-'+item.color : '']">
+            <div>
+              <q-item-section avatar>
+                <q-icon :name="item.icon" :color="item.color" />
+              </q-item-section>
+            </div>
+            <q-item-section>
+              <q-item-label>{{item.label}}</q-item-label>
+            </q-item-section>
+          </q-item>
+        </div>
       </q-list>
     </q-drawer>
     <q-page-container>
@@ -41,6 +45,11 @@
   </q-layout>
 </template>
 <script>
+import
+{
+  mapGetters,
+}
+from 'vuex'
 export default
 {
   name: 'MyLayout',
@@ -54,7 +63,7 @@ export default
         label: 'About',
         to: '#about',
         icon: 'fas fa-user-circle',
-        id: '',
+        id: 'about',
         color: 'indigo',
         class: ''
       },
@@ -62,7 +71,7 @@ export default
         label: 'Experience',
         to: '/',
         icon: 'fas fa-chart-line',
-        id: '',
+        id: 'experience',
         color: 'blue-grey',
         class: ''
       },
@@ -70,7 +79,7 @@ export default
         label: 'Projects',
         to: '/',
         icon: 'fas fa-toolbox',
-        id: '',
+        id: 'projects',
         color: 'cyan',
         class: ''
       },
@@ -115,6 +124,13 @@ export default
         class: ''
       }, ]
     }
+  },
+  computed:
+  {
+    ...mapGetters(
+    {
+      view_port_id: "global/getCurrentViewPort"
+    })
   }
 }
 

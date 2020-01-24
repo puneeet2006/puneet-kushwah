@@ -3,6 +3,11 @@
     <div class="content-headers">
       Experience
     </div>
+    <div>
+      <q-card class="q-pa-md text-h3">
+        {{data}}
+      </q-card>
+    </div>
   </div>
 </template>
 <script>
@@ -11,7 +16,9 @@ export default
   // name: 'ComponentName',
   data()
   {
-    return {}
+    return {
+      data: "lskjdkasjdklash dklashdkjasncjknkjsnckjasndkjash dkjashdjkasjdkasjdklasjdklasjdkasljddlfdsfds ksjdnfkjsdnfks jkdsnfkjsdnfkjds jkdsfk;sdjfl lskjdkasjdklash dklashdkjasncjknkjsnckjasndkjash dkjashdjkasjdkasjdklasjdklasjdkasljddlfdsfds ksjdnfkjsdnfks jkdsnfkjsdnfkjds jkdsfk;sdjfl lskjdkasjdklash dklashdkjasncjknkjsnckjasndkjash dkjashdjkasjdkasjdklasjdklasjdkasljddlfdsfds ksjdnfkjsdnfks jkdsnfkjsdnfkjds jkdsfk;sdjfl lskjdkasjdklash dklashdkjasncjknkjsnckjasndkjash dkjashdjkasjdkasjdklasjdklasjdkasljddlfdsfds ksjdnfkjsdnfks jkdsnfkjsdnfkjds jkdsfk;sdjfl "
+    }
   }
 }
 
