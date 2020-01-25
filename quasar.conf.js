@@ -25,7 +25,7 @@ module.exports = function(ctx)
       // 'themify',
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
       'fontawesome-v5',
-      'roboto-font', // optional, you are not bound to it
+      // optional, you are not bound to it
       'material-icons' // optional, you are not bound to it
     ],
 
@@ -178,7 +178,7 @@ module.exports = function(ctx)
 
       extendWebpack(cfg)
       {
-        sss
+        ssss
         // do something with Electron main process Webpack cfg
         // chainWebpack also available besides this extendWebpack
       }

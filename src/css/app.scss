@@ -1,12 +1,23 @@
 // app global css in SCSS form
+@import url('https://fonts.googleapis.com/css?family=Numans&display=swap" rel="stylesheet"');
 
+body {
+  font-family: 'Numans', sans-serif !important;
+
+}
+
+.body-bg {
+  background-image: url("/statics/bg-body.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 $tab-items-colors : ("indigo" : $indigo,
 "blue-grey" : $blue-grey,
 "cyan" : $cyan,
 "accent" : $accent,
 "deep-purple" : $deep-purple,
-"lime" : $lime,
+"pink" : $pink,
 "purple" : $purple,
 "deep-orange" : $deep-orange);
 
@@ -46,8 +57,13 @@ $tab-items-colors : ("indigo" : $indigo,
 .content-headers {
   background-color: $primary;
   color: white;
-  font-size: 4em;
-  padding: 5px;
+  font-size: 3em;
+  padding: 8px;
+}
+
+.content-details {
+  font-size: 2em;
+  color: #888888;
 }
 
 
@@ -82,5 +98,65 @@ $item in $tab-items-colors {
 
   .tab-color-active-#{$coloritem} {
     border-left: 4px solid (unquote($item));
+  }
+
+  .mob-color-active-#{$coloritem} {
+    background-color: (unquote($item));
+  }
+}
+
+
+
+@for $fw from 1 through 4 {
+  .fw-#{($fw*100)+300} {
+    font-weight: 300+($fw*100);
+  }
+}
+
+@for $mtt from 1 through 20 {
+  .mtt-#{($mtt*10)} {
+    margin-top: $mtt*10px;
+  }
+}
+
+@for $mrr from 1 through 20 {
+  .mrr-#{($mrr*10)} {
+    margin-right: $mrr*10px;
+  }
+}
+
+@for $mbb from 1 through 20 {
+  .mbb-#{($mbb*10)} {
+    margin-bottom: $mbb*10px;
+  }
+}
+
+@for $mll from 1 through 20 {
+  .mll-#{($mll*10)} {
+    margin-left: $mll*10px;
+  }
+}
+
+@for $ptt from 1 through 10 {
+  .ptt-#{($ptt*10)} {
+    padding-top: $ptt*10px;
+  }
+}
+
+@for $prr from 1 through 10 {
+  .prr-#{($prr*10)} {
+    padding-right: $prr*10px;
+  }
+}
+
+@for $pbb from 1 through 10 {
+  .pbb-#{($pbb*10)} {
+    padding-bottom: $pbb*10px;
+  }
+}
+
+@for $pll from 1 through 10 {
+  .pll-#{($pll*10)} {
+    padding-left: $pll*10px;
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="content-headers">
-      Projects
+      Contact
     </div>
     <div class="row q-ma-xl justify-center">
       <q-card class="q-pa-md full-width shadow-15">

@@ -5,13 +5,27 @@
         <div class="q-pa-md text-h3 text-white intro-text">I want to <span class="bg-indigo">make things &nbsp;</span><br> that <span class="intro-bottom">make a difference.</span></div>
       </div>
     </div>
-    <About id="about_view" v-view.in="viewHandler" />
-    <Experience id="experience_view" v-view.in="viewHandler" />
+    <div class="">
+      <About id="about_view" v-view.in="viewHandler" />
+      <Experience id="experience_view" v-view.in="viewHandler" />
+      <Projects id="projects_view" v-view.in="viewHandler" />
+      <Skills id="skills_view" v-view.in="viewHandler" />
+      <Education id="education_view" v-view.in="viewHandler" />
+      <Certificates id="certificates_view" v-view.in="viewHandler" />
+      <Contact id="contact_view" v-view.in="viewHandler" />
+      <Resume id="resume_view" v-view.in="viewHandler" />
+    </div>
   </q-page>
 </template>
 <script>
 import About from '../components/About.vue'
 import Experience from '../components/Experience.vue'
+import Projects from '../components/Projects.vue'
+import Skills from '../components/Skills.vue'
+import Education from '../components/Education.vue'
+import Certificates from '../components/Certificates.vue'
+import Contact from '../components/Contact.vue'
+import Resume from '../components/Resume.vue'
 
 export default
 {
@@ -20,6 +34,12 @@ export default
   {
     About,
     Experience,
+    Projects,
+    Skills,
+    Education,
+    Certificates,
+    Contact,
+    Resume
   },
   methods:
   {

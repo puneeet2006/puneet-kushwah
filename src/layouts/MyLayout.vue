@@ -11,10 +11,10 @@
         </q-card-section>
       </q-card>
       <q-tabs align="center">
-        <q-tab v-for="(item,index) in navbaritems" :key="index" :icon="item.icon" :name="item.label" :label="item.label" />
+        <q-tab v-scroll-to="'#'+item.id+'_view'" v-for="(item,index) in navbaritems" :key="index" :icon="item.icon" :name="item.label" :label="item.label" :class="[view_port_id == item.id ? 'q-tab--active' : '']" />
       </q-tabs>
     </q-header>
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered :width="250" content-class="bg-grey-2">
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered :width="220" content-class="bg-grey-2">
       <q-card square flat>
         <q-card-section>
           <div class="text-primary text-center text-h4 q-pa-md">
@@ -87,7 +87,7 @@ export default
         label: 'Skills',
         to: '/',
         icon: 'fas fa-laptop-code',
-        id: '',
+        id: 'skills',
         color: 'deep-purple',
         class: ''
       },
@@ -95,23 +95,23 @@ export default
         label: 'Education',
         to: '/',
         icon: 'fas fa-graduation-cap',
-        id: '',
+        id: 'education',
         color: 'accent',
         class: ''
       },
       {
         label: 'Certificates',
         to: '/',
-        icon: 'fas fa-certificate',
-        id: '',
-        color: 'lime',
+        icon: 'fas fa-star',
+        id: 'certificates',
+        color: 'pink',
         class: ''
       },
       {
         label: 'Contact',
         to: '/',
         icon: 'fas fa-id-card',
-        id: '',
+        id: 'contact',
         color: 'deep-orange',
         class: ''
       },
@@ -119,7 +119,7 @@ export default
         label: 'Resume',
         to: '/',
         icon: 'fas fa-file-contract',
-        id: '',
+        id: 'resume',
         color: 'purple',
         class: ''
       }, ]
