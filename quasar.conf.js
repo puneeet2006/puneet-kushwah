@@ -178,7 +178,7 @@ module.exports = function(ctx)
 
       extendWebpack(cfg)
       {
-        ssss
+        sssss
         // do something with Electron main process Webpack cfg
         // chainWebpack also available besides this extendWebpack
       }

@@ -50,8 +50,18 @@ $tab-items-colors : ("indigo" : $indigo,
   width: 100%;
 }
 
+.responsive
+ {
+  max-width: 100%;
+  height: auto;
+}
+
 .intro-bottom {
   border-bottom: 4px solid $indigo;
+}
+
+.project-card {
+  height: 450px;
 }
 
 .content-headers {
