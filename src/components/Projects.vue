@@ -5,30 +5,29 @@
     </div>
     <div class="row q-ma-xl justify-center">
       <q-card class="q-pa-md full-width shadow-15 row ">
-        <div class="q-pa-md col-md-6 col-sm-4 col-xs-12" v-for="(item,index) in projectdata" :key="index">
-          <Flipper width="100%" height="450px" :flipped="item.flipped" @click="onClick(item.id)" duration='1s'>
+        <div class="q-pa-md col-lg-4 col-xl-4 col-md-6 col-sm-4 col-xs-12 center-align" v-for="(item,index) in projectdata" :key="index">
+          <Flipper width="100%" height="300px" :flipped="item.flipped" duration='1s'>
             <div slot="front">
               <q-card class="project-card">
+                <img class="responsive" :src="item.front.imgscr">
                 <q-card-section>
-                  <img class="responsive" src="https://cdn.quasar.dev/img/mountains.jpg">
-                  <div class="text-h6">Our Changing Planet</div>
-                  <div class="text-subtitle2">by John Doe</div>
+                  <q-btn fab color="pink" @click="onClick(item.id)" icon="fas fa-ellipsis-v" class="absolute project-fab-btn" />
+                  <div class="row no-wrap items-center">
+                    <div class="col text-h6 ellipsis">
+                      <div class="text-primary">{{item.front.name}}</div>
+                      <div class="text-subtitle1 text-grey">{{item.front.desc}}</div>
+                    </div>
+                  </div>
                 </q-card-section>
-                <q-card-section>
-                  {{projectdata.front}}
-                </q-card-section>
-                <q-separator dark />
-                <q-card-actions>
-                  <q-btn flat>Action 1</q-btn>
-                  <q-btn flat>Action 2</q-btn>
-                </q-card-actions>
               </q-card>
             </div>
             <div slot="back">
               <q-card class="project-card">
                 <q-card-section>
-                  <div class="text-h6">back</div>
-                  <div class="text-subtitle2">by John Doe</div>
+                  <div class="full-width">
+                    <div class="text-h5 text-primary ">Tech Used</div>
+                    <div class="text-subtitle2 row justify-end">by John Doe</div>
+                  </div>
                 </q-card-section>
                 <q-card-section>
                   asdsadas
@@ -55,19 +54,60 @@ export default
   data()
   {
     return {
-      flipped: false,
 		projectdata: 
 		[
 			{
 				id:"proj1",
 				flipped:false,
-		        front: {},
+		        front: {
+		        	imgscr:'/statics/jtconsulting.png',
+		        	name:'JT Consulting Bangkok',
+		        	desc:'Leading recruitment firm in Bangkok'
+		        },
 		        back: {}
 		    },
 			{
 				id:"proj2",
 				flipped:false,
-		        front: {},
+		        front: {
+		        	imgscr:'/statics/dentalwarehouse.png',
+		        	name:'Dental Warehouse Australia',
+		        	desc:'Dental equipement ecommerce site operated in Australia'
+
+		        },
+		        back: {}
+			},
+						{
+				id:"proj3",
+				flipped:false,
+		        front: {
+		        	imgscr:'/statics/dentalwarehouse.png',
+		        	name:'Dental Warehouse Australia',
+		        	desc:'Dental equipement ecommerce site operated in Australia'
+
+		        },
+		        back: {}
+			},
+			{
+				id:"proj4",
+				flipped:false,
+		        front: {
+		        	imgscr:'/statics/dentalwarehouse.png',
+		        	name:'Dental Warehouse Australia',
+		        	desc:'Dental equipement ecommerce site operated in Australia'
+
+		        },
+		        back: {}
+			},
+			{
+				id:"proj5",
+				flipped:false,
+		        front: {
+		        	imgscr:'/statics/dentalwarehouse.png',
+		        	name:'Dental Warehouse Australia',
+		        	desc:'Dental equipement ecommerce site operated in Australia'
+
+		        },
 		        back: {}
 			}
 		]

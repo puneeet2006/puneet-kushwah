@@ -6,6 +6,10 @@ body {
 
 }
 
+.contact-badge {
+  display: none;
+}
+
 .body-bg {
   background-image: url("/statics/bg-body.jpg");
   background-repeat: no-repeat;
@@ -50,8 +54,7 @@ $tab-items-colors : ("indigo" : $indigo,
   width: 100%;
 }
 
-.responsive
- {
+.responsive {
   max-width: 100%;
   height: auto;
 }
@@ -60,8 +63,18 @@ $tab-items-colors : ("indigo" : $indigo,
   border-bottom: 4px solid $indigo;
 }
 
+.center-align {
+  margin: 0 auto;
+}
+
+.project-fab-btn {
+  top: 0;
+  right: 12px;
+  transform: translateY(-50%);
+}
+
 .project-card {
-  height: 450px;
+  height: 300px;
 }
 
 .content-headers {
