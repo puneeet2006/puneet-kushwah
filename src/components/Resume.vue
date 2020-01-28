@@ -71,18 +71,19 @@ export default
 
       docRef.getDownloadURL().then(function(url)
       {
-
         new Downloader(
         {
           url: url
         })
-        this.loading = false;
+
       }).catch(function(error)
       {
         console.log(error)
-        this.loading = false;
+
       });
+      this.loading = false;
     }
+
   }
 }
 
