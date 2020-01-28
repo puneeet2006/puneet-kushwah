@@ -8,7 +8,7 @@
         <q-card-section>
           <div class="row">
             <div class="col-md-6 col-xs-6 col-sm-6 col-xl-6 col-lg-6" v-for="item in certificates">
-              <div class="text-center text-h5 text-grey">{{item.title}}</div>
+              <div class="text-center text-h5 text-grey" style="word-wrap: break-word;">{{item.title}}</div>
               <img v-img:spimg :src="item.imgpath" class="q-pa-md responsive" :alt="item.title">
             </div>
           </div>

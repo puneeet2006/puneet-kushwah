@@ -11,7 +11,7 @@
           </q-avatar>
         </q-card-section>
         <q-card-section>
-          <div class="text-grey text-h6 text-center">{{ contact.link }}</div>
+          <div class="text-grey text-h6 text-center" style="word-wrap: break-word;">{{ contact.link }}</div>
         </q-card-section>
       </q-card>
     </div>

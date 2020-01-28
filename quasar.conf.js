@@ -17,6 +17,12 @@ module.exports = function(ctx)
       'app.scss'
     ],
 
+    htmlVariables:
+    {
+      title: 'Puneet Kushwah | Full-Stack Developer',
+      description: 'Puneet Kushwah | Full-Stack Developer'
+    },
+
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
       // 'ionicons-v4',

@@ -1,6 +1,13 @@
 // app global css in SCSS form
 @import url('https://fonts.googleapis.com/css?family=Numans&display=swap" rel="stylesheet"');
 
+// natural box layout model all layouts
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
 body {
   font-family: 'Numans', sans-serif !important;
 
@@ -30,12 +37,29 @@ $tab-items-colors : ("indigo" : $indigo,
   .tab-items {
     display: none !important;
   }
+
+
 }
 
 @media (max-width: $breakpoint-sm-max) {
 
   .intro-text {
-    font-size: 1em !important;
+    font-size: 2em !important;
+  }
+
+  .project-img {
+    height: 150px !important;
+  }
+}
+
+@media (max-width: $breakpoint-xs-max) {
+
+  .intro-text {
+    font-size: 2em !important;
+  }
+
+  .project-img {
+    height: 150px !important;
   }
 }
 
@@ -74,7 +98,7 @@ $tab-items-colors : ("indigo" : $indigo,
 }
 
 .project-card {
-  height: 300px;
+  height: 320px;
 }
 
 .content-headers {

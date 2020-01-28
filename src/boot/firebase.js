@@ -19,11 +19,11 @@ let firebaseApp = firebase.initializeApp(firebaseConfig);
 let firebaseAuth = firebaseApp.auth();
 let firebaseDb = firebaseApp.database();
 let firebaseStorage = firebaseApp.firestore();
-let firebaseImageStorage = firebaseApp.storage();
+let firebaseFileStorage = firebaseApp.storage();
 export
 {
   firebaseAuth,
   firebaseDb,
   firebaseStorage,
-  firebaseImageStorage
+  firebaseFileStorage
 }

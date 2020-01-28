@@ -9,11 +9,11 @@
           <Flipper width="100%" height="300px" :flipped="item.flipped" duration='1s'>
             <div slot="front">
               <q-card class="project-card">
-                <img class="responsive" :src="item.front.imgscr">
+                <img class="responsive project-img" :src="item.front.imgscr">
                 <q-card-section>
                   <q-btn fab color="pink" @click="onClick(item.id)" icon="fas fa-ellipsis-v" class="absolute project-fab-btn" />
                   <div class="row no-wrap items-center">
-                    <div class="col text-h6 ellipsis">
+                    <div class="col text-h6 ">
                       <div class="text-primary">{{item.front.name}}</div>
                       <div class="text-subtitle1 text-grey">{{item.front.desc}}</div>
                     </div>
@@ -54,63 +54,63 @@ export default
   data()
   {
     return {
-		projectdata: 
-		[
-			{
-				id:"proj1",
-				flipped:false,
-		        front: {
-		        	imgscr:'/statics/jtconsulting.png',
-		        	name:'JT Consulting Bangkok',
-		        	desc:'Leading recruitment firm in Bangkok'
-		        },
-		        back: {}
-		    },
-			{
-				id:"proj2",
-				flipped:false,
-		        front: {
-		        	imgscr:'/statics/dentalwarehouse.png',
-		        	name:'Dental Warehouse Australia',
-		        	desc:'Dental equipement ecommerce site operated in Australia'
+    projectdata: 
+    [
+      {
+        id:"proj1",
+        flipped:false,
+            front: {
+              imgscr:'/statics/jtconsulting.png',
+              name:'JT Consulting Bangkok',
+              desc:'Leading recruitment firm in Bangkok'
+            },
+            back: {}
+        },
+      {
+        id:"proj2",
+        flipped:false,
+            front: {
+              imgscr:'/statics/dentalwarehouse.png',
+              name:'Dental Warehouse Australia',
+              desc:'Dental equipement ecommerce site operated in Australia'
 
-		        },
-		        back: {}
-			},
-						{
-				id:"proj3",
-				flipped:false,
-		        front: {
-		        	imgscr:'/statics/dentalwarehouse.png',
-		        	name:'Dental Warehouse Australia',
-		        	desc:'Dental equipement ecommerce site operated in Australia'
+            },
+            back: {}
+      },
+            {
+        id:"proj3",
+        flipped:false,
+            front: {
+              imgscr:'/statics/dentalwarehouse.png',
+              name:'Dental Warehouse Australia',
+              desc:'Dental equipement ecommerce site operated in Australia'
 
-		        },
-		        back: {}
-			},
-			{
-				id:"proj4",
-				flipped:false,
-		        front: {
-		        	imgscr:'/statics/dentalwarehouse.png',
-		        	name:'Dental Warehouse Australia',
-		        	desc:'Dental equipement ecommerce site operated in Australia'
+            },
+            back: {}
+      },
+      {
+        id:"proj4",
+        flipped:false,
+            front: {
+              imgscr:'/statics/dentalwarehouse.png',
+              name:'Dental Warehouse Australia',
+              desc:'Dental equipement ecommerce site operated in Australia'
 
-		        },
-		        back: {}
-			},
-			{
-				id:"proj5",
-				flipped:false,
-		        front: {
-		        	imgscr:'/statics/dentalwarehouse.png',
-		        	name:'Dental Warehouse Australia',
-		        	desc:'Dental equipement ecommerce site operated in Australia'
+            },
+            back: {}
+      },
+      {
+        id:"proj5",
+        flipped:false,
+            front: {
+              imgscr:'/statics/dentalwarehouse.png',
+              name:'Dental Warehouse Australia',
+              desc:'Dental equipement ecommerce site operated in Australia'
 
-		        },
-		        back: {}
-			}
-		]
+            },
+            back: {}
+      }
+    ]
       }
   },
   components:
@@ -121,8 +121,8 @@ export default
   {
     onClick(id)
     {
-    	const indexOfProduct = this.projectdata.findIndex(product=> product.id === id);
-    	this.projectdata[indexOfProduct].flipped = !this.projectdata[indexOfProduct].flipped;
+      const indexOfProduct = this.projectdata.findIndex(product=> product.id === id);
+      this.projectdata[indexOfProduct].flipped = !this.projectdata[indexOfProduct].flipped;
     }
   }
 

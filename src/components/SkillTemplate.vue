@@ -6,7 +6,7 @@
         <q-separator class="mtt-20 mbb-20" color="primary" />
       </div>
       <div class="row justify-around">
-        <div class="" v-for="item in techItems">
+        <div class="q-pa-md" v-for="item in techItems">
           <div class="full-width row justify-center">
             <q-avatar size="7em" color="pink" text-color="white" :icon="item.icon">
             </q-avatar>
