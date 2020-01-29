@@ -3,8 +3,8 @@
     <div class="content-headers">
       Skills
     </div>
-    <div class="row q-ma-xl">
-      <div class="q-pa-md full-width">
+    <div class="row q-ma-md justify-center">
+      <div class="full-width">
         <SkillTemplate title="Front-End" :techItems="frontend" />
         <SkillTemplate title="JavaScript" :techItems="javascript" class="mtt-20" />
         <SkillTemplate title="Back-End" :techItems="backend" class="mtt-20" />

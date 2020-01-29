@@ -3,8 +3,8 @@
     <div class="content-headers">
       Contact
     </div>
-    <div class="row q-ma-sm justify-center">
-      <q-card class="cursor-pointer q-pa-md q-ma-md q-pa-md shadow-15 mbb-30 col-md-4" v-for="contact in contacts" :key="contact.id" clickable v-ripple @click="contactAction(contact.id,contact.link)">
+    <div class="row q-ma-md justify-center">
+      <q-card class="cursor-pointer q-pa-md q-ma-md q-pa-md shadow-15 mbb-30 col-md-4 col-sm-12 col-xs-12" v-for="contact in contacts" :key="contact.id" clickable v-ripple @click="contactAction(contact.id,contact.link)">
         <q-card-section class="row justify-center">
           <q-avatar color="pink" size="7em" text-color="white" :icon="contact.icon">
             <q-badge class="contact-badge" v-show="contact.contact_badge_show" color="primary" floating>Copied!</q-badge>

@@ -4,10 +4,7 @@
       Resume
     </div>
     <div class="row q-ma-xl justify-center">
-      <q-card class="q-pa-md full-width shadow-15 text-h1">
-        <div class="text-center text-h4 text-grey">
-          Download Resume
-        </div>
+      <div class="q-pa-md full-width text-h1">
         <div class="row q-ma-sm justify-center">
           <q-card class="q-pa-md q-ma-md q-pa-md shadow-15 mbb-30 col-md-4">
             <q-card-section class="row justify-center">
@@ -28,7 +25,7 @@
             </q-card-section>
           </q-card>
         </div>
-      </q-card>
+      </div>
     </div>
   </div>
 </template>

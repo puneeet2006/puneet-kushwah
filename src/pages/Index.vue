@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="">
-      <About id="about_view" v-view.in="viewHandler" />
+      <About id="about_view" v-view="viewHandler" />
       <Experience id="experience_view" v-view.in="viewHandler" />
       <Projects id="projects_view" v-view.in="viewHandler" />
       <Skills id="skills_view" v-view.in="viewHandler" />
@@ -41,12 +41,28 @@ export default
     Contact,
     Resume
   },
+  mounted()
+  {
+    this.$store.commit('global/SET_CURRENT_VIEW_PORT', "");
+  },
   methods:
   {
     viewHandler: function(e)
     {
+      var topCardElement = document.getElementById("header-card-item");
+      if (e.target.element.id == 'about_view')
+      {
+
+        topCardElement.style.display = "block";
+      }
+      else
+      {
+        topCardElement.style.display = "none";
+      }
+
       if (e.percentTop === 1)
       {
+
         this.$store.commit('global/SET_CURRENT_VIEW_PORT', null);
       }
       else

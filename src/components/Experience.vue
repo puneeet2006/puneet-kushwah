@@ -4,7 +4,7 @@
       Experience
     </div>
     <div>
-      <div class="row q-ma-xl justify-center">
+      <div class="row q-ma-md justify-center">
         <q-card class="q-pa-md full-width shadow-15">
           <div class="q-px-lg q-pb-md">
             <q-timeline color="pink">

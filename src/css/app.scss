@@ -10,12 +10,21 @@
 
 body {
   font-family: 'Numans', sans-serif !important;
-
+  height: 100%;
 }
+
+
 
 .contact-badge {
   display: none;
 }
+
+div.sticky-tab {
+  position: sticky !important;
+  position: -webkit-sticky !important;
+  top: 0 !important;
+}
+
 
 .body-bg {
   background-image: url("/statics/bg-body.jpg");
@@ -61,6 +70,11 @@ $tab-items-colors : ("indigo" : $indigo,
   .project-img {
     height: 150px !important;
   }
+
+  .project-card {
+    height: 320px !important;
+
+  }
 }
 
 #intro-wrapper {
@@ -98,7 +112,7 @@ $tab-items-colors : ("indigo" : $indigo,
 }
 
 .project-card {
-  height: 320px;
+  height: 300px;
 }
 
 .content-headers {

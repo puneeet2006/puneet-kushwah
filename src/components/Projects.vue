@@ -3,9 +3,9 @@
     <div class="content-headers">
       Projects
     </div>
-    <div class="row q-ma-xl justify-center">
+    <div class="row q-ma-md justify-center">
       <q-card class="q-pa-md full-width shadow-15 row ">
-        <div class="q-pa-md col-lg-4 col-xl-4 col-md-6 col-sm-4 col-xs-12 center-align" v-for="(item,index) in projectdata" :key="index">
+        <div class="q-pa-md col-lg-4 col-xl-4 col-md-6 col-sm-12 col-xs-12 center-align" v-for="(item,index) in projectdata" :key="index">
           <Flipper width="100%" height="300px" :flipped="item.flipped" duration='1s'>
             <div slot="front">
               <q-card class="project-card">

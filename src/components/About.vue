@@ -3,7 +3,7 @@
     <div class="content-headers">
       About
     </div>
-    <div class="row q-ma-xl justify-center">
+    <div class="row q-ma-md justify-center">
       <q-card class="q-pa-md full-width shadow-15">
         <div class="text-h3 text-center text-primary mtt-20 mbb-20">Hi, I am Puneet. Nice to meet you.</div>
         <div class="content-details q-pa-md">
